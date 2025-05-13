@@ -1,21 +1,21 @@
 body {
-    background-color: #2C3E50; /* Darker, more professional background */
+    background-color: #2C3E50; 
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    font-family: 'Roboto', sans-serif; /* Clean, modern font */
+    font-family: 'Roboto', sans-serif; 
 }
 
 h2 {
     text-align: center;
-    color: #ECF0F1; /* Lighter color for better contrast */
+    color: #ECF0F1; 
     font-size: 2rem;
 }
 
 .container {
     display: flex;
-    background-color: #34495E; /* Darker, more neutral background */
+    background-color: #34495E; 
     min-height: 70vh;
     width: 40vw;
     flex-wrap: wrap;
@@ -23,7 +23,7 @@ h2 {
     align-items: center;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a polished look */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .btn {
@@ -35,22 +35,22 @@ h2 {
     margin: 10px;
     border-radius: 12px;
     padding: 20px;
-    font-size: 4.5rem; /* Slightly bigger font */
+    font-size: 4.5rem;
     font-style: italic;
-    background-color: #16A085; /* Teal for the button */
-    color: #fff; /* White text for contrast */
+    background-color: #16A085; 
+    color: #fff; 
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #1ABC9C; /* Lighter teal on hover */
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    background-color: #1ABC9C; 
+    transform: scale(1.05); 
 }
 
 .reset-btn {
-    background-color: #E67E22; /* Professional amber/orange */
+    background-color: #E67E22; 
     color: #fff;
     padding: 10px 20px;
     border-radius: 8px;
@@ -61,12 +61,12 @@ h2 {
 }
 
 .reset-btn:hover {
-    background-color: #D35400; /* Darker amber on hover */
+    background-color: #D35400; 
 }
 .gamebox {
     display: flex;
-    justify-content: space-between; /* Distribute space between the scores */
-    width: 80%; /* Adjust width of the game box */
+    justify-content: space-between;
+    width: 80%; 
     margin-bottom: 20px;
     align-items: center;
 }
@@ -78,7 +78,7 @@ h2 {
 }
 
 #winner {
-    display: none;
+    display: flex;
     position: fixed;
     justify-content: center;
     align-items: center;
@@ -88,29 +88,37 @@ h2 {
     width: 50%;
     height: 40%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay */
+    background-color: rgba(0, 0, 0, 0.6); 
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+
 }
 
+
 .modal-content {
-    background-color: #ECF0F1; /* Soft light background for the modal */
+    position: relative; 
+    background-color: #ECF0F1;
     padding: 30px;
     border-radius: 12px;
-    width: 80%;
+    width: 90%;
+    height: 80%;
     text-align: center;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+
+
 .modal-content h2 {
-    color: #2C3E50; /* Darker text for better readability */
+    color: #2C3E50; 
     font-size: 2rem;
     margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 .modal-content button {
-    background-color: #E67E22; /* Matching reset button color */
+    background-color: #E67E22; 
     color: white;
     font-size: 1.2rem;
     padding: 10px 20px;
@@ -121,18 +129,23 @@ h2 {
 }
 
 .modal-content button:hover {
-    background-color: #D35400; /* Slightly darker on hover */
+    background-color: #D35400;
 }
 
 .close {
+    position: absolute;
+    top: 10px;
+    right: 10px; 
     color: #aaa;
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
+    z-index: 2;
 }
+
 
 .close:hover,
 .close:focus {
-    color: #2C3E50; /* Match close button color to modal text */
+    color: #2C3E50; 
     text-decoration: none;
 }
